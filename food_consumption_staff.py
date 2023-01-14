@@ -26,7 +26,7 @@ st.subheader(""" Dear madam/sir,
 
 st.write(""" ##### In partial fulfillment of the requirement for the award of bachelor in science 
 (B.Sc.) in human nutrition and dietetics, 
-I ……. with registration number …… is conducting a study on “Food consumption pattern of administrative staff in AAU, Ekpoma”. 
+I ……. with registration number …… is conducting a study on “Food consumption pattern of administrative staff”. 
 
 Information obtained from this questionnaire is strictly for research purpose and will be kept confidential. 
 I will appreciate if you could answer all questions in each section below.
