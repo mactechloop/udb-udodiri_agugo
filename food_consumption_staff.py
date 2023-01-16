@@ -14,9 +14,7 @@ def generateRandom():
     return res
 
 
-st.title("""DEPARTMENT OF HUMAN NUTRITION AND DIETETICS,
-FACULTY OF LIFE SCIENCES, AMBROSE ALLI UNIVERSITY
-EKPOMA, EDO STATE
+st.title("""Food Consumption Pattern on Anthropometric (BMI &Waist-To-Hip-Ratio) Status of Subjects/Respondents
 """)
 
 st.text("___"*100)
@@ -24,17 +22,18 @@ st.text("___"*100)
 st.subheader(""" Dear madam/sir,
 """)
 
-st.write(""" ##### In partial fulfillment of the requirement for the award of bachelor in science 
-(B.Sc.) in human nutrition and dietetics, 
-I ……. with registration number …… is conducting a study on “Food consumption pattern of administrative staff”. 
-
+st.write(""" In partial fulfillment of the requirement for the award of bachelor in science (B.Sc.) in human nutrition and dietetics, 
+I ……. with registration number …… is conducting a study on “Food Consumption Pattern of ……….. on Anthropometric Status of…..”. 
 Information obtained from this questionnaire is strictly for research purpose and will be kept confidential. 
-I will appreciate if you could answer all questions in each section below.
-Thank you for your attention. 
+Please, answer all questions in each section below
+""")
 
+st.write("""
+    Thank you for your attention. 
 """)
 
 st.text("___"*100)
+
 
 st.subheader("SECTION A: Socio-Demographic Characteristics of Respondents")
 
@@ -200,12 +199,19 @@ k7 = st.selectbox('Pumpkin', ('A (Once a day)', 'B (2-3 times daily)', 'C (2-3 t
 st.text("___"*100)
 
 st.subheader("SECTION C: Anthropometric Indices of Respondents")
-l1 = st.number_input('Height (CM)')
-l2 = st.number_input('Weight (CM)')
-l3 = st.number_input('Waist circumference (CM)')
-l4 = st.number_input('Hip circumference (CM)')
+l1 = st.number_input('Height (CM)', min_value=0)
+l2 = st.number_input('Weight (CM)', min_value=0)
+l3 = st.number_input('Waist circumference (CM)', min_value=0)
+l4 = st.number_input('Hip circumference (CM)', min_value=0)
 
 if st.button("Submit Questionnare"):
+
+    try:
+        bmi = l2 / l1
+        wthr = l3 / l4
+    except:
+        bmi = 0
+        wthr = 0
 
     if firebase_admin._DEFAULT_APP_NAME not in firebase_admin._apps:
         cred_obj = firebase_admin.credentials.Certificate('qdataapp-firebase.json')
@@ -322,4 +328,6 @@ if st.button("Submit Questionnare"):
         
 
     st.success('Data added Successfully')  
+    st.info('Your BMI is --> ' + str(bmi) + 'kg/m2')
+    st.info('Your Waist-to-hip-ratio is --> ' + str(wthr))
 
