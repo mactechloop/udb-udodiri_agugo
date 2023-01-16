@@ -14,7 +14,25 @@ def generateRandom():
     return res
 
 
-st.title("Questionnaire for food access among students households (FFQ)")
+st.title("Food Access among Students Households (FFQ Method)")
+
+st.text("___"*100)
+
+st.write("""
+## Dear madam/sir,
+""")
+
+st.write("""
+    In partial fulfillment of the requirement for the award of bachelor in science (B.Sc.) in human nutrition and dietetics, 
+    I ……. with registration number …… is conducting a study on ‘Food Access among Student Households using FFQ Method …..”. 
+    Information obtained from this questionnaire is strictly for research purpose and will be kept confidential. 
+    Please, answer all questions in each section below.
+
+""")
+
+st.write("""
+    Thank you for your attention. 
+""")
 
 st.text("___"*100)
 
