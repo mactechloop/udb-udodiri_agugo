@@ -14,7 +14,24 @@ def generateRandom():
     return res
 
 
-st.title("Impact of high food cost on BMI & food consumption pattern of AAU Students")
+st.title("Food Cost on Food Choice & BMI")
+
+st.text("___"*100)
+
+st.write("""
+## Dear madam/sir,
+""")
+
+st.write("""
+    In partial fulfilment of the requirement for the award of bachelor in science (B.Sc.) in human nutrition and dietetics, 
+    I ……. with registration number …… is conducting a study on ‘Food Cost on Food Choice & BMI status of …..”. 
+    Information obtained from this questionnaire is strictly for research purpose and will be kept confidential. 
+    Please, answer all questions in each section below.
+""")
+
+st.write("""
+    Thank you for your attention. 
+""")
 
 st.text("___"*100)
 
@@ -31,7 +48,7 @@ a8 = st.selectbox('Family Size', ('A (2-3)', 'B (4-6)', 'C (7-10)', 'D ( > 10)')
 
 st.text("___"*100)  
 
-st.subheader("SECTION B: Food Consumption Pattern of Respondent")
+st.subheader("SECTION B: Food Choice")
 
 st.text("___"*100)
 
@@ -57,10 +74,16 @@ b16 = st.selectbox('(16) If your answer to question 14 is None, Why?', ('A (Caus
 st.text("___"*100)
 
 st.subheader("SECTION C: Anthropometric Measurement")
-c1 = st.number_input('Weight (kg)')
-c2 = st.number_input('Height (m)')
+c1 = st.number_input('Weight (kg)', min_value=0)
+c2 = st.number_input('Height (m)', min_value=0)
+
+
 
 if st.button("Submit Questionnare"):
+    try:
+        bmi = c1 / c2
+    except:
+        bmi = 0
 
     if firebase_admin._DEFAULT_APP_NAME not in firebase_admin._apps:
         cred_obj = firebase_admin.credentials.Certificate('qdataapp-firebase.json')
@@ -125,4 +148,5 @@ if st.button("Submit Questionnare"):
         
 
     st.success('Data added Successfully')  
+    st.info('Your BMI is --> ' + str(bmi) + 'kg/m2')
 
