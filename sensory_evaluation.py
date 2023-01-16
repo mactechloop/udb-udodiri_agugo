@@ -42,18 +42,20 @@ def generateRandom():
 
     return res
 
-st.title("Sensory evaluation form")
+st.title("Sensory Evaluation of Food Samples")
 
 st.text("___"*100)
+st.write("""
+## Dear Panelist
+""")
 
 st.write("""
     Kindly evaluate the following samples using the scale provided below. 
     Information generated from this exercise is strictly for research purpose. 
-    Individual perceptions on the texture (hand feel), appearance (color), 
-    aroma and general acceptability as well as contributions (comment) on what else you 
-    feel about the samples will be most welcomed.
-
+    Individual perceptions on the texture (hand/ mouth feel), appearance (color), aroma (flavor) and 
+    general acceptability as well as contributions (comment) on what else you feel about the samples will be most welcomed. 
     Wash your hands in the basin of water provided after evaluating each sample to avoid bias.
+
 """)
 
 st.text("___"*100)
@@ -61,7 +63,7 @@ st.text("___"*100)
 st.subheader("""Instruction: Rate samples using  the scale provided below""")
 
 st.text("___"*100)
-st.text("""""""9 –point Hedonic ranking scale""""""")
+st.text("""""""9 –point Hedonic ranking scale (Ihenkoronye and Ngoddy, 1985) """"""")
 st.text("""
 
 9- liked extremely
