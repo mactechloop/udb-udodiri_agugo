@@ -35,7 +35,7 @@ st.write("""
 st.text("___"*100)
 
 
-st.subheader("SECTION A: Socio-Demographic Characteristics of Respondents")
+st.subheader("SECTION A: Personal Data")
 
 a1 = st.selectbox('Age', ('A (18-25)', 'B (26-35)', 'C (36-50)', 'D ( > 50)'))
 a2 = st.selectbox('Sex', ('A (male)', 'B (female)'))
