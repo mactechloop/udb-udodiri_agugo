@@ -14,9 +14,24 @@ def generateRandom():
     return res
 
 
-st.title("Questionnaire for Dietary Diversity of Women 15-49 years (24 hr open recall method)")
+st.title("Dietary Diversity of Women (15-49 Years) (24 Hr Open Recall Method)")
 
 st.text("___"*100)
+
+st.write("""
+## Dear madam/sir,
+""")
+
+st.write("""
+    In partial fulfillment of the requirement for the award of bachelor in science (B.Sc.) in human nutrition and dietetics, 
+    I ……. with registration number …… is conducting a study on ‘Dietary Diversity of Women (15-49 years) using 24 hr Open Recall Method …..”. 
+    Information obtained from this questionnaire is strictly for research purpose and will be kept confidential. 
+    Please, answer all questions in each section below.
+""")
+
+st.write("""
+    Thank you for your attention. 
+""")
 
 st.subheader("Section A: Personal Data")
 
