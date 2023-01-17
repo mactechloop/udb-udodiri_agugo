@@ -199,15 +199,16 @@ k7 = st.selectbox('Pumpkin', ('A (Once a day)', 'B (2-3 times daily)', 'C (2-3 t
 st.text("___"*100)
 
 st.subheader("SECTION C: Anthropometric Indices of Respondents")
-l1 = st.number_input('Height (CM)', min_value=0)
-l2 = st.number_input('Weight (CM)', min_value=0)
-l3 = st.number_input('Waist circumference (CM)', min_value=0)
-l4 = st.number_input('Hip circumference (CM)', min_value=0)
+l1 = st.number_input('Height (M)')
+l2 = st.number_input('Weight (KG)')
+l3 = st.number_input('Waist circumference (CM)')
+l4 = st.number_input('Hip circumference (CM)')
 
 if st.button("Submit Questionnare"):
 
     try:
-        bmi = l2 / l1
+        height = l1 * l1
+        bmi = l2 / height
         wthr = l3 / l4
     except:
         bmi = 0
@@ -328,6 +329,6 @@ if st.button("Submit Questionnare"):
         
 
     st.success('Data added Successfully')  
-    st.info('Your BMI is --> ' + str(bmi) + 'kg/m2')
+    st.info('Your BMI is --> ' + str(bmi))
     st.info('Your Waist-to-hip-ratio is --> ' + str(wthr))
 
