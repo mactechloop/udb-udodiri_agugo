@@ -74,14 +74,15 @@ b16 = st.selectbox('(16) If your answer to question 14 is None, Why?', ('A (Caus
 st.text("___"*100)
 
 st.subheader("SECTION C: Anthropometric Measurement")
-c1 = st.number_input('Weight (kg)', min_value=0)
-c2 = st.number_input('Height (m)', min_value=0)
+c1 = st.number_input('Weight (KG)', min_value=0)
+c2 = st.number_input('Height (M)', min_value=0)
 
 
 
 if st.button("Submit Questionnare"):
     try:
-        bmi = c1 / c2
+        hei = c2 * c2
+        bmi = c1 / hei
     except:
         bmi = 0
 
@@ -148,5 +149,5 @@ if st.button("Submit Questionnare"):
         
 
     st.success('Data added Successfully')  
-    st.info('Your BMI is --> ' + str(bmi) + 'kg/m2')
+    st.info('Your BMI is --> ' + str(bmi))
 
