@@ -126,7 +126,8 @@ if st.button("Submit Questionnare"):
             "Reason for choice of fruits and vegetable" : b15[0],
             "If your answer to question 14 is None, Why" : b16[0],
             "height" : c1,
-            "weight" : c2
+            "weight" : c2,
+            "BMI" : bmi
         }
     }
 
