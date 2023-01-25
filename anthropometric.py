@@ -81,7 +81,9 @@ if st.button("Submit Questionnare"):
             "Height" : l1,
             "Weight" : l2,
             "Waist Circumference" : l3,
-            "Hip Circumference" : l4
+            "Hip Circumference" : l4,
+            "BMI" : bmi,
+            "WTHR" : wthr
         }
     }
 
