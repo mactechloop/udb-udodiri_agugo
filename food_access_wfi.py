@@ -240,7 +240,7 @@ if st.button("Submit Questionnare"):
             "Fufu" : f1[0],
             "Garri" : f2[0],
             "Yam" : f3[0],
-            "African Salad" : f3[0],
+            "African Salad" : f4[0],
             "Cocoyam" : f5[0],
             "Sweet Potatoe" : f6[0],
             "Irish Potatoe" : f7[0],
