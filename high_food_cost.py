@@ -74,8 +74,8 @@ b16 = st.selectbox('(16) If your answer to question 14 is None, Why?', ('A (Caus
 st.text("___"*100)
 
 st.subheader("SECTION C: Anthropometric Measurement")
-c1 = st.number_input('Weight (KG)', min_value=0)
-c2 = st.number_input('Height (M)', min_value=0)
+c1 = st.number_input('Weight (KG)')
+c2 = st.number_input('Height (M)')
 
 
 
