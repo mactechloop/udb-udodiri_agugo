@@ -33,15 +33,17 @@ st.write("""
     Thank you for your attention. 
 """)
 
+st.text("___"*100)
+
 st.subheader("Section A: Personal Data")
 
-st.selectbox('Age', ('A (18-25)', 'B (26-35)', 'C (36-50)', 'D ( > 50)'))
-st.selectbox('Education Qualification', ('A (FSLC)', 'B (SSCE)', 'C (graduate)', 'D (none)'))
-st.selectbox('Marital Status', ('A (single)', 'B (married)', 'C (divorced)', 'D (widow)'))
-st.selectbox('Occupation', ('A (Civil servant)', 'B (Trader)', 'C (Farmer)', 'D (Other)'))
-st.selectbox('Income Level', ('A ( ≤ N10,000)', 'B (N20,000-N50,000)', 'C (N50,000-N80,000)', 'D (> N80,000)'))
-st.selectbox('Religion', ('A (Traditional religion)', 'B (Christianity)', 'C (Islam)', 'D (other)'))
-st.selectbox('Family Size', ('A (2-3)', 'B (4-5)', 'C (6-9)', 'D ( > 9)'))
+a1 = st.selectbox('Age', ('A (18-25)', 'B (26-35)', 'C (36-50)', 'D ( > 50)'))
+a2 = st.selectbox('Education Qualification', ('A (FSLC)', 'B (SSCE)', 'C (graduate)', 'D (none)'))
+a3 = st.selectbox('Marital Status', ('A (single)', 'B (married)', 'C (divorced)', 'D (widow)'))
+a4 = st.selectbox('Occupation', ('A (Civil servant)', 'B (Trader)', 'C (Farmer)', 'D (Other)'))
+a5 = st.selectbox('Income Level', ('A ( ≤ N50,000)', 'B (N60,000-N80,000)', 'C (N90,000 -N110,000)', 'D ( ≥ N120,000)'))
+a6 = st.selectbox('Religion', ('A (Traditional religion)', 'B (Christianity)', 'C (Islam)', 'D (other)'))
+a7 = st.selectbox('Family Size', ('A (2-3)', 'B (4-5)', 'C (6-9)', 'D ( > 9)'))
 
 st.text("___"*100)  
 
@@ -179,6 +181,13 @@ if st.button("Submit Questionnare"):
 
     myData = {
         generateRandom() : {
+            "Age" : a1[0],
+            "Education Qualification" : a2[0],
+            "Marital Status" : a3[0],
+            "Occupation" : a4[0],
+            "Income Level" : a5[0],
+            "Religion" : a6[0],
+            "Family Size" : a7[0],
             "Grains roots tuber": aa,
             "Pulses": b[0],
             "Nuts and seeds ": c[0],
