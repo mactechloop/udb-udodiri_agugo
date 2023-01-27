@@ -105,7 +105,7 @@ if st.button("Submit Questionnare"):
             "Sex": a2[0],
             "Sponsor": a3[0],
             "Edu or Qualification of Sponsor" : a4[0],
-            "Sponsor's Occupation" : a4[0],
+            "Sponsor's Occupation" : a5[0],
             "Family income (monthly)" : a6[0],
             "Religion" : a7[0],
             "Family Size" : a8[0],
