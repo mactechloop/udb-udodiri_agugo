@@ -41,7 +41,7 @@ a1 = st.date_input(
     "Date of administration of questionnaire",
     datetime.date(2019, 7, 6))
 a2 = st.text_input("Site of interview")
-a3 = st.text_input("State")
+a3 = st.selectbox('State', ('Abuja', 'Bayelsa', 'Brono'))
 a4 = st.text_input("LGA")
 a5 = st.text_input("Type of shelter")
 a6 = st.text_input("Name of IDP Camp")
