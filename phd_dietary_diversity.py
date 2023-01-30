@@ -18,6 +18,10 @@ st.title("Dietary Diversity Assessment (24 Hr Open Recall Method)")
 
 st.text("___"*100)
 
+state = st.selectbox('State', ('Abuja', 'Bayelsa', 'Brono'))
+
+st.text("___"*100)
+
 st.write("""
 ## Dear Respondents,
 """)
@@ -179,6 +183,7 @@ if st.button("Submit Questionnare"):
 
     myData = {
         generateRandom() : {
+            'State' : state,
             "Age" : a1[0],
             "Education Qualification" : a2[0],
             "Marital Status" : a3[0],
