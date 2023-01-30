@@ -34,7 +34,9 @@ st.write("""
 """)
 
 st.text("___"*100)
+state = st.selectbox('State', ('Abuja', 'Bayelsa', 'Brono'))
 
+st.text("___"*100)
 
 st.subheader("Section A: 24 hour dietary recall at household level")
 st.write("""
@@ -356,6 +358,7 @@ if st.button("Submit Questionnare"):
 
     myData = {
         generateRandom() : {
+            'State' : state,
             "Milk A" : b1[0],
             "Yoghurt A" : b2[0],
             "Cheese A" : b3[0],
