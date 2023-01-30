@@ -34,6 +34,10 @@ st.write("""
 
 st.text("___"*100)
 
+state = st.selectbox('State', ('Abuja', 'Bayelsa', 'Brono'))
+
+st.text("___"*100)
+
 
 st.subheader("Section A: Personal Data")
 
@@ -41,6 +45,14 @@ a1 = st.selectbox('Age', ('A (6-8)', 'B (9-11)', 'C (12-14)', 'D (15-17)',
 'E (18-20)', 'F (21-25)', 'G (26-30)', 'H (31-45)', 'I (46-50)', 'J (51-55)', 'K (55-60)'))
 a2 = st.selectbox('Gender', ('A (male)', 'B (female)'))
 
+user_age_cat = ''
+if a1[0] in ['A', 'B']:
+   user_age_cat = "School Children"
+elif a1[0] in ['C', 'D', 'E']:
+    user_age_cat = 'Adolescent'
+elif a1[0] in ['F', 'G', 'H', 'I', 'J', 'K']:
+    user_age_cat = 'Adult'
+    
 st.text("___"*100)
 
 st.subheader("SECTION B: Anthropometric Indices of Respondents")
@@ -74,6 +86,8 @@ if st.button("Submit Questionnare"):
         generateRandom() : {
             "Age": a1[0],
             "Sex": a2[0],
+            "State" : state,
+            "Age Category" : user_age_cat,
             "Height" : l1,
             "Weight" : l2,
             "Waist Circumference" : l3,
