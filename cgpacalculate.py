@@ -2,8 +2,8 @@ import streamlit as st
 
 tcu = None
 
-credit_units = st.text_input('All Credit Accanddingly Seperated By A Comma')
-grades = st.text_input('All Grades Accanddingly Seperated By A Comma')
+credit_units = st.text_input('All Credit Units Accordingly Seperated By A Comma')
+grades = st.text_input('All Grades Accordingly Seperated By A Comma')
 
 if(st.button('Visualize And Calculate')):
     st.info('Please Wait.....')
