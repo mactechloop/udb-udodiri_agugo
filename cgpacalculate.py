@@ -125,7 +125,7 @@ elif(option == 'Visualised Calculator'):
             st.image('sampledata.PNG')
     try:
         
-        uploaded_file = st.file_uploader("Upload Dataset", type={'csv', 'xlsx'})
+        uploaded_file = st.file_uploader("Upload Dataset", type={'csv'})
     except:
         pass
 
